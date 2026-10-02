@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Personal Internet Number — Find Your Place</title>
+<meta name="description" content="Get your personal Internet Number and see where you currently stand among visitors from around the world.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your Personal Internet Number — Find Your Place">
+<meta property="og:description" content="Everyone gets a number. What's yours?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F7F2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0A0A'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23B7FF32'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav wrap">
+  <a class="brand" href="#top" aria-label="Internet Number, home"><span class="mark" aria-hidden="true"></span>INTERNET NUMBER</a>
+  <nav aria-label="Main">
+    <a href="#how">How it works</a>
+    <a href="#positions">About</a>
+    <a href="#share">Share</a>
+    <span class="live"><i class="dot pulse"></i>LIVE</span>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero wrap">
+  <p class="eyebrow">The internet is counting</p>
+  <h1>Everyone has<br>a number.</h1>
+  <p class="lede">Every visit gets a number. See where you stand today, this week, and across everyone who's visited.</p>
+  <div class="bignum" aria-live="polite"><span data-bind="number" id="heroNumber">#0</span></div>
+  <p class="label">Your Internet Number</p>
+  <p class="sub">You arrived here at <b data-bind="number">#0</b>.</p>
+  <div class="actions">
+    <a class="btn btn-lime" href="#live" id="getNumber">Get my number <span aria-hidden="true">→</span></a>
+    <a class="link" href="#how">How does this work?</a>
+  </div>
+</section>
+
+<!-- LIVE POSITION -->
+<section class="dark" id="live">
+  <div class="wrap split">
+    <div>
+      <h2>Your position doesn't stay still.</h2>
+      <p class="muted">You were <b data-bind="today">#0</b> when you arrived.</p>
+      <p class="big-line">Now you're <b class="lime" id="nowToday">#0</b>.</p>
+      <p class="muted"><span id="after">0</span> people arrived after you.</p>
+    </div>
+    <dl class="ticker">
+      <div><dt>Today</dt><dd data-bind="today" id="tToday">#0</dd></div>
+      <div><dt>This week</dt><dd data-bind="weekly" id="tWeek">#0</dd></div>
+      <div><dt>All time</dt><dd data-bind="allTime" id="tAll">#0</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- LIVE INTERNET -->
+<section class="wrap universe-wrap" aria-labelledby="uh">
+  <h2 id="uh">People are arriving.</h2>
+  <p class="here"><i class="dot pulse"></i><b id="hereNow">38</b> people here right now</p>
+  <div class="universe" id="universe" aria-hidden="true"></div>
+</section>
+
+<!-- THREE POSITIONS -->
+<section class="wrap" id="positions">
+  <h2 class="sr">The three positions</h2>
+  <article class="pos pos-today">
+    <h3>Today</h3>
+    <p>Your place among everyone visiting today.</p>
+    <span class="n" data-bind="today">#0</span>
+  </article>
+  <article class="pos pos-week">
+    <h3>This week</h3>
+    <p>Your place among this week's visitors.</p>
+    <span class="n" data-bind="weekly">#0</span>
+  </article>
+  <article class="pos pos-all">
+    <h3>All time</h3>
+    <p>Your place among everyone who's ever visited.</p>
+    <span class="n" data-bind="allTime">#0</span>
+  </article>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="wrap" id="how">
+  <h2>It's very simple.</h2>
+  <ol class="steps">
+    <li><span class="fig f1" aria-hidden="true"></span><h3>01 Visit</h3><p>You arrive.</p></li>
+    <li><span class="fig f2" aria-hidden="true">#</span><h3>02 Get a number</h3><p>Your visit gets recorded.</p></li>
+    <li><span class="fig f3" aria-hidden="true">→</span><h3>03 Watch it move</h3><p>Every new visitor can change your position.</p></li>
+  </ol>
+</section>
+
+<!-- ARCHIVE -->
+<section class="dark archive">
+  <div class="wrap">
+    <h2>Every visit leaves a trace.</h2>
+    <ul class="trace" id="trace"></ul>
+    <p class="muted">Thousands of tiny moments.<br>One very unnecessary number.</p>
+  </div>
+</section>
+
+<!-- SHARE -->
+<section class="wrap split" id="share">
+  <div>
+    <h2>What's your number?</h2>
+    <p class="muted">Screenshot it. Send it. Compare.</p>
+    <button class="btn btn-black" id="shareBtn" type="button">Share my number <span aria-hidden="true">↗</span></button>
+    <p class="toast" id="toast" role="status"></p>
+  </div>
+  <div class="card" id="card">
+    <p class="label">Your Internet Number</p>
+    <p class="card-n" data-bind="number">#0</p>
+    <p class="card-t">Today <b class="lime" data-bind="today">#0</b></p>
+    <p class="card-f">Find your place.</p>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final wrap">
+  <p class="eyebrow">So...</p>
+  <h2 class="final-h">Where do<br>you stand?</h2>
+  <p class="bignum mid"><span data-bind="number">#0</span></p>
+  <a class="btn btn-lime" href="#top">Check my position <span aria-hidden="true">→</span></a>
+  <p class="muted small">Your position changes with every visit.</p>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <div>
+    <p class="brand"><span class="mark" aria-hidden="true"></span>INTERNET NUMBER</p>
+    <p class="muted small">Just a tiny experiment on the internet.</p>
+  </div>
+  <nav aria-label="Footer"><a href="#positions">About</a><a href="#how">How it works</a><a href="#top">Privacy</a><a href="#share">Share</a></nav>
+  <p class="live"><i class="dot pulse"></i>THE INTERNET IS LIVE</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
